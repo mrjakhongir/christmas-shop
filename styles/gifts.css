@@ -1,0 +1,122 @@
+.gifts {
+  background-color: var(--text-accent);
+  border-radius: 2rem;
+}
+
+.gifts__inner {
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.gifts-top {
+  background-image: url('../assets/images/bg-garland.png');
+  background-size: contain;
+  background-position: start;
+  background-repeat: no-repeat;
+  padding-top: 6rem;
+}
+
+.gifts__title {
+  max-width: 426px;
+  margin: 0 auto;
+}
+
+.gifts-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.filter-item {
+  font-family: var(--ff-primary-semiBold);
+  font-size: 1.2rem;
+  line-height: 1.56rem;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-white);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 1.2rem 2rem;
+  border-radius: 1.2rem;
+  user-select: none;
+}
+
+.filter-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.filter-active,
+.filter-active:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: default;
+}
+
+.filter-active:hover {
+	cursor: default;
+}
+
+.gifts__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.up-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--text-accent);
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .filter-item:hover {
+    background-color: transparent;
+    cursor: default;
+  }
+	.filter-active,
+	.filter-active:hover {
+		background-color: rgba(255, 255, 255, 0.2);
+		cursor: default;
+	}
+
+	.filter-active:hover {
+		background-color: rgba(255, 255, 255, 0.2);
+		cursor: default;
+	}
+}
+
+@media (max-width: 564px) {
+  .gifts__title {
+    padding: 0 0.8rem;
+  }
+
+  .gifts-filters {
+    padding: 0 5px;
+    gap: 0;
+  }
+
+  .filter-item {
+    white-space: nowrap;
+    padding: 1.2rem 0.8rem;
+  }
+
+  .filter-active,
+  .filter-active:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: default;
+  }
+}
